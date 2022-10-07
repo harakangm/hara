@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p><H1>폼태그 연습</H1></p>
+
+<form action=""> <!--[action] 버튼을 누를때 속성값으로 이동 페이지 or 서버자체 / [method] 데이터를 넘겨주는 방법-->
+    <!-- [method]="get" 주소에다 데이터를 실어나르는 방식 [method]="post" 주소의 데이터를 숨김 -->
+    <fieldset> <!--필드를 만들어줌-->
+        <legend>연습</legend>
+        <label for="user_id">아이디 : <input type="text" id="user_id" name="user_id"></label>
+        <label for="user_password">비밀번호 : <input type="password" id="user_password" name="user_password"></label>
+        <!-- id 와 name 동일하게 -->
+        <input type="submit" value="로그인"> <!--submit 버튼 value 이름-->
+    </fieldset>
+
+    <fieldset>
+        <legend>연습</legend>
+        <label for="date">날짜 <input type="date"></label>
+        <label for="time">시간 <input type="time"></label>
+    </fieldset>
+    <hr />
+    <fieldset>
+        <legend>연습</legend>
+        <p>성별</p>
+        <input type="radio" name="gender" value="male">남성
+        <input type="radio" name="gender" value="female">여성
+        <hr />
+        <p>성별</p>
+        <input type="radio" name="testgender1" value="male">남성
+        <input type="radio" name="testgender2" value="femla">여성
+        <hr />
+        <input type="checkbox" name="color" value="blue">파랑
+        <input type="checkbox" name="color" vlaue="green">녹색
+        
+     <!-- radio태그와 check박스태그 차이 -->
+    </fieldset>
+    <fieldset>
+        <legend>수량버튼</legend>
+        <label>사과<input type="number" min="3" max="10" value="3"><small> 최소수량3</small></label>
+    </fieldset>
+    
+</form>
+
+
+    
+</body>
+</html>
