@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+      width: 960px;
+      margin : 0 auto;
+    }
+    .navi{
+      width: 960px;
+      height: 60px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+    }
+    .navi ul{
+      list-style: none;
+      padding-top: 10px; 
+      padding-bottom: 5px;
+    }
+    .navi ul li {
+      float: left;
+      width: 150px;
+      padding: 10px;   
+    }
+    .navi a:link, .navi a:visited{  /* 방문한 링크와 방문하지 않은 링크를 설정 */
+      display: block;                 /* :link(방문하지 않은 링크), :visited(방문했던링크) */
+      font-size: 14px;
+      color :#000;
+      padding: 10px; 
+      text-decoration: none;  /* 밑줄 없앰 */
+      text-align: center;
+    }
+    .navi a:hover, .navi a:focus{ /*:hover(마우스 오버했을때) :focus(tab키를 누를때)*/
+      background-color: aqua;  /* 배경 색 */
+      color: #fff;             /* 글자 색 */
+    }
+    .navi a:active {        /*:active(마우스로 클릭했을때)*/
+      background-color: #f00;  /* 배경 색 */
+    }
+
+    /* :link, :visited  링크가 있는태그/방문한태그 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navi">
+          <ul>
+            <li><a href="#">이용 안내</a></li>
+            <li><a href="#">객실 소개</a></li>
+            <li><a href="#">예약 방법 및 요금</a></li>
+            <li><a href="#">예약하기</a></li>
+          </ul>
+        </nav>  
+     </div>   
+</body>
+</html>
