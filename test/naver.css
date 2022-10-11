@@ -1,0 +1,11 @@
+.list {
+    list-style: none;
+}
+
+.month {
+    /* width: 60px; */
+}
+
+.day {
+    width: 50px;
+}

@@ -1,0 +1,9 @@
+
+/*2.내부스타일 작성법 */
+h1 { color : aqua;
+font-style: italic;} 
+/* 선택자 스타일속성 스타일 값 */
+p {
+     color : brown; 
+    font-size: 20px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        /* 1.전체 선택자
+        전체 태그, body, head, html 까지도 적용된다*/
+        *{
+            font-style: 20px;
+            color: aqua;
+        }
+        /* 2.태그(타입) 선택자
+          앞에 태그가옴*/
+        h1 {
+            color: red;
+        }
+        /* 3.클래스 선택자 
+            정해진 클래스안에 css내용을 삽입
+            공통적으로 스타일을 적용하고 싶을때*/
+
+        .title {
+            font-size: 6px;
+            color: red;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- class명은 의미가 있는 이름으로 같게해줘야 한다 -->
+    <h1 class="title">자유게시판</h1>
+    <p class="title">안녕하세요. 내용입니다.</p>
+    <p>안녕하세요. 내용입니다.</p>
+    <SPAN>SPAN태그 입니다.</SPAN>
+    
+</body>
+</html>

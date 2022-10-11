@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        .join{
+            background-color: green;
+            color: white;
+        }
+
+        .navermain{
+            font-size: 70px;
+            text-align : center;
+        }
+
+        .loginpage{
+            position: absolute;
+            top: 0%;
+            left: 40%;
+        }
+
+    </style>
+    <link rel="stylesheet" href="./naver.css">
+</head>
+<body>
+    <div class="loginpage">
+        <h1 style="color: green;" class="navermain">NAVER</h1>
+        <fieldset style="width: 500px;" >
+            <form action="">
+                <ul class="list">
+                    <li>
+                        <label for="user_id">아이디</label><br />
+                        <input type="text" name="user_id" id="uers_id" placeholder="@naver.com" >
+                    </li>
+                    <li>
+                        <label for="user_password">비밀번호</label><br />
+                        <input type="password" name="uesr_password" id="user_password">
+                    </li>
+                    <li>
+                        <label for="user_passwordc">비밀번호 확인</label><br />
+                        <input type="password" id="user_password" name="user_password">
+                    </li>
+                </ul>
+
+                <ul class="list">
+                    <li>
+                        <label for="name">이름</label><br />
+                        <input type="text" id="name" name="name">
+                    </li>
+                    <li>
+                        <label for="year">생년월일</label><br />
+                       
+                            <input type="text" name="year" id="year" placeholder="년(4자)" class="day">
+                            <select name="" id="" class="day">
+                                <option value="">월</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                                <option value="">9</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                            </select>
+                            <input type="text" placeholder="일" class="day">
+                        
+                    </li>
+                    <li>
+                        <label for="gender">성별</label><br />
+                        <select name="" id="">
+                            <option value="">성별</option>
+                            <option value="male">남자</option>
+                            <option value="female">여자</option>
+                            <option value="">선택안함</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="cemail">본인 확인 이메일(선택)</label><br />
+                        <input type="email" name="cemail" placeholder="선택입력">
+                    </li>
+                </ul>
+        
+                <ul class="list">
+                    <li>
+                        <label for="phone">휴대전화</label><br />
+                        <select name="" id="">
+                            <option value="">
+                                대한민국 +82
+                            </option>
+                            <option value="">
+                                호주 +62
+                            </option>
+                        </select><br/>
+                        <input type="text" name="" id="" placeholder="전화번호 입력">
+                        <button type="submit">인증번호 받기</button><br />
+                        <input type="text" placeholder="인증번호 입력하 세요">
+        
+                    </li>
+                    <p><button type="submit" class=join>가입하기</button></p>
+                </ul>
+            </form>
+        </fieldset>
+    </div>
+    
+    
+</body>
+</html>

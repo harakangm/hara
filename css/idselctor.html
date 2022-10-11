@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*4. id 선택자 : 각각 스타일을 적용할때*/
+        #board {
+            color: aqua;
+        }
+
+        #contents {
+            color: red;
+        }
+
+        .on {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+        <!-- id와 class는 같이 사용가능  -->
+        <!-- id명은 의미가 있는 이름으로 다르게 해줘야 한다 중복X -->
+        <!-- class 이름은 여러개를 만들수 있다 -->
+        <!-- class="클래스1 클래스2 클래스3" 여러개를 사용가능-->
+        <h1 class="title2 on" id="board">자유게시판</h1>
+        <p id="contents">안녕하세요. 내용입니다.</p>
+        <p class="title on">안녕하세요. 내용입니다.</p>
+        <SPAN>SPAN태그 입니다.</SPAN>
+        <label for="user_id">아이디</label>
+        <form action="">
+            <input type="text" id="user_id" name="user_id">
+        </form>
+        
+</body>
+</html>
