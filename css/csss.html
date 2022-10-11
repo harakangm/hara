@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tb, td, th{
+            border:1px solid #ccc;
+            border-collapse: collapse;
+            width: 240px;
+            height: 80px;
+        }
+        /* 후손 선택자 */
+        .tb td{
+            text-align: center;
+        }
+
+        a[target="_blank"]{
+            background-color: pink;
+            
+        }
+        
+        a[target]{
+            color: blue;
+        }
+
+        button[type=submit]{
+            color: blue;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <div>
+        <table class="tb">
+            <tr>
+                <th>1</th>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+
+        <div class="link">
+            <table>
+                <tr>
+                    <th><a href="./css.html" target="_blank">css</a></th>
+                </tr>
+                <tr>
+                    <th><a href="#" target="_blank">눌러</a></th>
+                </tr>
+                <tr>
+                    <th><a href="#" target="_parent">눌러2</a></th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="">
+            <ul>
+                <form action="./css.html">
+                    <button type="submit" formtarget="_blank">메뉴</button>
+                </form>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
