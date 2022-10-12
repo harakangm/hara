@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            /* 1배 원사이즈 글자에는 px, (n)em, (n)rem 을 많이 사용함*/
+            /* em 부모 태그 폰트 사이즈가 기준이 됨 */
+            /* html페이지 폰트 사이즈가 기준이 됨 */
+            font-size: 30px;
+        }
+
+        #content {
+            font-size:  10px;
+        }
+
+        #content p {
+            font-size: 2em;
+        }
+
+        p:nth-of-type(1) { font-size: 1rem;}
+        p:nth-of-type(2) { font-size: 2rem;}
+
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p>1Lorem ipsum dolo</p>
+    </div>
+        <p>2Lorem ipsum dolo</p>
+        <p>3Lorem ipsum dolo</p>
+    
+</body>
+</html>

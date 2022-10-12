@@ -1,0 +1,62 @@
+@charset "utf-8"; /*인코딩*/
+
+/* 초기화 코드 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ccc;
+    padding: 20px;
+}
+
+#signup {}
+
+#signup fieldset {
+
+}
+
+/* 제출 버튼 */
+#signup fieldset:last-of-type {
+
+}
+
+/* 로그인 정보, 개인정보 */
+#signup legend {
+
+}
+
+/* 개인정보 li , 로그인 정보 li */
+#singup ul li {
+
+}
+
+/* label 요소 */
+#signup label {
+
+}
+
+/* 제출 버튼 */
+#signup button {
+
+}
+
+#singup input[type=text], #singup input[type=password], #singup input[type=tel],#singup input[type=email] {
+
+}
+
+/* input에서 reaquired 속성을 가진 */
+#signup input[required] {
+
+}
+
+#signup input[readonly] {
+
+}
+
+/* 버튼에 마우스가 올라갔을때 */
+#signup button:hover{
+    
+}
