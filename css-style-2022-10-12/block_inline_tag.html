@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=.0">
+    <title>Document</title></head>
+    <style>
+        /* 
+         block: margin과 padding을 자유롭게 지정, widhd-height 자유롭게 변경가능
+          div, 시멘틱 태그(레이아웃), p, h1~h6, table ,ul ol 기타등등
+
+         inline: magin과 padding을 좌우만 지정, width-height 변경 불가
+         a, img, span, button, textarea, selcet, input, label 기타등등
+        
+         display: inline-block-none: display 뒤에오는 속성 값에 따라 태그의 속성을 바꿔주는 css
+
+        */
+        span {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            margin: 30px;
+            padding: 30px;
+            display: block; /* block을 적용하면 block 속성 inline-block 태그를 적용하면 인라인 속성이면서 블록태그 속성을 가짐*/
+        }
+        
+        
+        a[class]:hover{
+            color: blue;
+            background-color: aquamarine;
+        }
+        .bt {
+            display:inline-block
+            
+        }
+    </style>
+<body>    <!-- 블록태그 width 100% -->
+    <P>블록 태그</P>
+    <P>블록 <span>아아</span> 태그</P>
+    <P>블록 태그</P>
+    <P>블록 태그</P>
+    <hr />
+    <!-- 인라인 태그 -->
+    <span>인라인 태그</span>
+    <span>인라인 태그</span>
+    <span>인라인 태그</span>
+    <span>인라인 태그</span>
+
+    <a href="./(3)webfont.html" class="apple">키키</a>
+
+    <button type="submit" class="bt">눌러</button>
+</body>
+</html>
