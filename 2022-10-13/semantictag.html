@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 962px;    /*widith의 총합*/
+            margin: 0 auto;
+        }
+
+        #aside {
+            width: 200px;  
+            height: 100%;
+            float: right;
+        }
+        .section {
+            width: 760px;
+            float: left;
+        }
+
+        #wrap {
+            overflow: hidden; /*범위를 나갈때 충돌을 완화*/
+        }
+    </style>
+</head>
+<body>
+    <!--큰 골격-->
+    <header><h1>Header</h1></header>
+    <nav<h1>Navigation</h1></nav>
+    <main id="wrap">
+        <aside id="aside">
+            <h1>aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit iusto quos at blanditiis deleniti, iste quae repudiandae possimus vero autem praesentium, hic a quasi deserunt, aperiam impedit minus modi.</p>
+        </aside>
+        <section id="section1" class="section">
+            <h1>section1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur amet iusto consectetur quasi, fugiat sit porro, obcaecati a quo vitae maiores excepturi! Earum, nostrum? Laudantium consequatur ratione mollitia obcaecati quibusdam.</p>
+        </section>
+        <section id="section2" class="section">
+            <h1>section2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus voluptatem. Quo, iusto eaque fugiat commodi quibusdam eligendi consequatur laudantium nulla, sequi et facilis aut possimus dolor quis incidunt libero.</p>
+        </section>
+        <section id="section3" class="section">
+            <h1>section3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio veritatis cum iure est sunt illum iusto quasi similique odio atque nostrum molestiae, rem, earum laborum neque! Molestiae dolores maiores dolorum!</p>
+        </section>
+    </main>
+    <footer><h1>Footer</h1></footer>
+</body>
+</html>

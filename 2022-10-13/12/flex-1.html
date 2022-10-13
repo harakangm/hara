@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>플렉스 박스 레이아웃</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      width: 700px;
+      background-color: #eee;
+      border: 1px solid #222;
+      margin-bottom: 30px;
+      display: flex; /*안에 있는 아이템들이 수평으로 정렬*/
+    }
+    .box {
+      padding: 5px 45px;
+      margin: 5px;   
+      width: 80px;
+      background-color: #222;   
+    }
+
+    /* flex-direction: 방향을 지정해줌 아이템에 사용*/
+    #opt1{
+      /* 디폴트 */
+      flex-direction: row;
+    }
+    #opt2{
+      
+      flex-direction: row-reverse;
+    }
+    #opt3{
+      flex-direction: column;
+    }
+    #opt4{
+      flex-direction: column-reverse;
+    } 
+    
+    #opt5{
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+    }
+
+    p {
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="opt1">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div> 
+    <div class="box"><p>3</p></div>
+  </div>
+  <div class="container" id="opt2">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+  </div>
+  <div class="container" id="opt3">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+   </div>
+  <div class="container" id="opt4">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+  </div>
+  <div class="container" id="opt5">
+    <button>클릭</button>
+  </div>            
+</body>
+</html>
