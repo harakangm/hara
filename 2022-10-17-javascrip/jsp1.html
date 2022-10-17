@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        /*
+        주석여러줄쓸때 
+        */
+
+        // 자바스크립트 질문 3대장
+
+        //alert("test!!"); //경고
+
+        //confirm("확인하시겠습니까?"); //확인 취소 문구
+
+        //prompt("입력하세요" , 10); // 입력창 (내용 , 초기값)
+
+        //자바스크립트 안에 문자열을 쓸때 "" 나 '' 를 써야함
+        
+        //console.log("와하하하"); //콘솔에서 찍는거
+        //document.write("테스트입니다."); //document에서 찍는거
+
+    //--------------------------------------------------------------------------------------------------------- 
+
+        // var str = "test"; //문자형
+        // //  변수  자료
+        // console.log(str) 
+
+        // var str2 = "i " + "am " + str; //문자열 합산
+        // console.log(str2)
+
+        // var str3 = "1\n2 1 " //문자형
+        // var sum = 10;
+        // var sum2 = 2;
+        // //더하기를 할때 하나라도 문자형이 있으면 문자열 합산을 한다
+        // console.log(str3 + sum + sum2);
+
+        // console.log("안녕하세요. 저는 '하라' 입니다.");
+        // console.log('안녕하세요. 저는 "하라" 입니다.');
+        // console.log("안녕하세요. 저는 \"하라\" 입니다.")
+        // console.log("안녕하세요 \\ \n저\t는 하라입니다.")
+
+        var string = "안녕하세요 "
+        var string2 = "강하라"
+        var string3 = "입니다"
+        console.log(string+string2+string3)
+    //--------------------------------------------------------------------------------------------------------- 
+        var num = 9;  //숫자형
+        var num2 = 2;
+        var sum = num + num2
+
+
+        console.log(num / num2); //나누기
+        console.log(num % num2); //나머지
+        console.log(sum);
+
+    //-------------------------------------------------------------------------------------------------------------
+         //boolean형
+
+        // var flag = 10 !== 9 ;
+        // console.log(flag);    
+
+        var a = 10;
+		var b = 20;
+		var c = 10;
+		var f = "20";
+
+		var result = b == f; //값만 비교
+        var result2 = b === f; // 값 비교 + 자료형 비교
+        
+        console.log(result)
+        console.log(result2)
+
+
+        var a;          //undefind : 값이 정해지지 않음
+        var b = null;   //null 빈값
+
+        console.log(a);
+        console.log(b);
+
+        // // ★undefined, null , 빈문자열 (''), 0 을 제외한 모든 것은 true
+
+        // console.log(Boolean(b)); // 불린값으로 변환시켜주는 javascrip 언어
+
+        var flag1 = 10 > 2, flag2 = 10 < 5 , flag3 = 2 >=1; // True F T
+
+        console.log(flag1 && (flag2 && flag3)) //and (두개 다 true여야 true)
+        console.log(flag1 || flag2 && flag3) //or  (하나면 true여도 true)
+        console.log(!flag1)         //not (반대로 true<->flase)
+
+        console.log(typeof("하라")) // 자료형 검사
+
+        
+    </script>
+
+
+</body>
+</html>

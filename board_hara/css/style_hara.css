@@ -1,18 +1,12 @@
 @charset "utf-8" ;
 
-/* 초기화속성 */
-
 * {
     margin: 0;
-    padding: 0;
+    padding: 0%;
 }
 
 html {
     font-size: 10px;
-}
-
-ul,li {
-    list-style: none;
 }
 
 a {
@@ -20,22 +14,25 @@ a {
     color: inherit;
 }
 
-/* 공통 */
+ul, li {
+    list-style: none;
+}
+
 
 .bt_wrap {
     margin-top: 30px;
     text-align: center;
-    font-size: 0;
+    font-size: 0px;
 }
 
-.bt_wrap a{
+.bt_wrap a {
     display: inline-block;
-    min-width: 80px;
-    margin-left: 10px;
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 2px;
     font-size: 1.4rem;
+    border: 1px solid #4444;
+    padding: 10px;
+    min-width: 80px;
+    border-radius: 4px;
+    margin-left: 10px;
     text-align: center;
 }
 
@@ -43,7 +40,11 @@ a {
     text-decoration: underline;
 }
 
-.bt_wrap a.on{
+.bt_wrap a.on {
     background: #000;
     color: #fff;
+  }
+
+.wrap{
+    
 }

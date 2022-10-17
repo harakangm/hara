@@ -5,6 +5,175 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 초기화 태그 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: noen !important;
+        }
+
+        img {border: 0;}
+
+        ul {
+            list-style: none;
+        }
+
+        header, footer, section {
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            background-color: wheat;
+        }
+
+        /* 0 ~ 766px */
+        .header__nav {
+            max-width: 1200px; /*반응형에서 n값 이상 커지지 않음*/
+            background-color: greenyellow;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .header__nav > h1 {
+            width: 100px; 
+            height: 120px;
+        }
+
+        .header__nav > nav {
+            width: clac(100%-100px);
+            background-color: blue;
+            height: 120px;
+        }
+
+        .header__nav > nav > ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .header__nav > .delivery-order {
+            width: 168px;
+        }
+
+        section .con {
+            max-width: 1440px;
+            margin: 0 auto;
+            height: 100%;
+        }
+        
+        .slider {
+            height: 480px;
+        }
+
+        .slider__content {
+            background-color: blueviolet;
+        }
+
+        .youtube {
+            height: 605px;
+
+        }
+
+        .youtube__content {
+            background-color: tomato;
+        }
+
+        .sns {
+            height: 160px;
+        }
+
+        .sns__content {
+            background-color: turquoise;
+        }
+
+        .sns__content > ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sns__content > ul > li {
+            flex: 1;
+            text-align: center;
+        }
+
+        .guide {
+            height: 480px;
+        }
+
+        .guide__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide__content > div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .guide__content > .content__app {
+            background-color: hotpink;
+        }
+
+            
+        .guide__content > .content__delivery {
+            background-color: indianred;
+        }
+
+        .store {
+            height: 597px;
+        }
+
+        .store__content{
+            background-color: honeydew;
+        }
+
+        .store__content ul {
+            /*float를 사용할때 부모 태그에 overflow: hidden 을 줘야한다 */
+            overflow: hidden; 
+            /* 1144 % 1440 */
+            width: 79.44%;
+            margin: 0 auto;
+        }
+
+        .store__content ul li {
+            /* flex 로 만들어 볼것 */
+            float: left;
+            width: 33.33%;
+            text-align: center;
+        }
+
+        .banner {
+            height: 200px;
+        }
+
+        .banner__content {
+            background-color: gray;
+        }
+
+        footer {
+            height: 680px;
+            background-color: yellow;
+        }
+        /* 767 ~ 1023px */
+        @media all and (min-width:767px) {
+            .guide__content {
+                flex-direction: row;
+            }
+
+            .store__content ul li {
+                width: 16.66%;
+            }
+        }
+        /* 1024px 이상 */
+        @media all and (min-width:1024px) {
+            
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -34,7 +203,11 @@
         </section>
         <section class="sns">
             <div class="sns__content con">
-
+                <ul class="content__list">
+                    <li>youtube</li>
+                    <li>facebook</li>
+                    <li>instagram</li>
+                </ul>
             </div>
         </section>
             <div class="section__content con">
@@ -42,12 +215,21 @@
             </div>
         <section class="guide">
             <div class="guide__content con">
-
+                <div class="content__app">app</div>
+                <div class="content__delivery">deli</div>
             </div>
         </section>
         <section class="store">
             <div class="store__content con">
-
+                <div>매장찾기</div>
+                <ul>
+                    <li>딜리버리</li>
+                    <li>킹오더</li>
+                    <li>드라이브 스루</li>
+                    <li>24시간</li>
+                    <li>아침메뉴</li>
+                    <li>주차공간</li>
+                </ul>
             </div>
         </section>
         <section class="banner">
