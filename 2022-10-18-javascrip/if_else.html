@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if : 만약에 ~라면 else: 그 밖에
+        
+        // if 괄호 안에 조건식이 참일 때 중괄호 안에있는 값을 실행
+        // if (273 > 100) {
+        //     alert('true입니다')
+        // }
+
+        // if (true) {
+        //     alert('true입니다')
+            
+        //     if (90 > 10) {
+        //     alert('트루 입니다')
+        // }
+        // }
+        // // if문 중첩 가능
+
+        const date = new Date(); //날짜, 시간 객체
+        const hour = date.getHours(); //현재 시간
+        console.log(hour)
+
+        // &&: 두개다 true 면 true || 하나만 트루여도 트루 !부정 반대로감
+
+        if (hour >= 12 && hour < 12 ) {   //6~11
+            alert('오전 입니다.');
+        } else if( hour > 12 && hour <= 18) {     //12~ 18     //if에 대한 값이 true면 if안에 있는 블록을 실행하고 거짓이면 else를 실행 중첩가능
+            alert('오후입니다.');
+        } else {
+            alert('저녁입니다.');
+        }
+
+        //  true의 값이 나오면 그 밑에 것은 실행이 안된다
+
+        if (hour < 11 ) {   
+            alert('오전 입니다.');
+        } else if( hour < 15) {     
+            alert('오후입니다.');
+        } else {
+            alert('저녁입니다.');
+        }
+
+
+
+
+
+
+        // if (hour >= 12) {
+        //     alert('오후입니다.')
+        // }
+    </script>
+</body>
+</html>

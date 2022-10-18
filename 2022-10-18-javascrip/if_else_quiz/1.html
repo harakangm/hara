@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const num = Number(prompt('숫자를 입력하세요'))
+
+
+
+        // if (num > 50) {
+        //     alert('50 이상의 수입니다.')
+        // } else if ( num < 50) {
+        //     alert('50 미만의 수 입니다.')
+        // }
+
+        // const result = ( num > 50 ) ? alert('50 이상의 수 입니다.') : alert('50 미만의 수 입니다.');
+
+        switch (num - 50 >= 0) {
+            case true:
+                   alert('50 이상의 수 입니다.') 
+                break;
+        
+            default:
+                  alert('50 미만의 수 입니다.')
+                break;
+        }
+
+    </script>
+</body>
+</html>
