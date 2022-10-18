@@ -10,21 +10,20 @@
     <script>
         const grade = Number(prompt('학년을 입력하세요'))
         const score = Number(prompt('점수를 입력하세요'))
+        
 
-        if (score < 0 || score > 100) {
+        if (score < 0 || score > 100 || grade > 6) {
             alert("에러입니다!");
         } else {
-            if (grade === 4) {
-
+            if ( grade === 4 && score >= 70 ) {
+                alert(`${grade}학년 ${score}점 합격입니다`)
+            } else if ((score >= 60) && grade !== 4 ){
+                alert(`${grade}학년 ${score}점 합격입니다`)
             } else {
-                
+                alert(`${grade}학년 ${score}점 불합격입니다`)
             }
-
-        }
-
-
-
-
+        } 
+        
 
 
         // alert(`${grade}학년 ${score}점`)
