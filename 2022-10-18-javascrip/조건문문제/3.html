@@ -12,7 +12,7 @@
         const score = Number(prompt('점수를 입력하세요'))
         
 
-        if (score < 0 || score > 100 || grade > 6) {
+        if (score < 0 || score > 100 || grade > 6 || grade <= 0 ) {
             alert("에러입니다!");
         } else {
             if ( grade === 4 && score >= 70 ) {

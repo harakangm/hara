@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 반복문중 하나 조건식이 false가 되면 종료
+        //    초기값      반복식    증가값
+        for ( let i = 0; i < 5 ; i++ ) {
+            console.log( i );
+        }
+
+        for (let d = 10 ; d < 20; d+=2) {
+            console.log( d ); 
+        }
+
+
+        let sum = 0;
+        for (let T = 0; T <= 100; T++ ){ //0 ~ 100 까지
+            sum += T  //  sum = sum + 1;  ( 0부터 100까지의 합계 )
+            console.log(`sum : ${sum}`)
+        }
+
+        // 누적 합산은 for 밖에 써야한다
+        console.log(`최종 sum : ${sum}`)
+    </script>
+</body>
+</html>
