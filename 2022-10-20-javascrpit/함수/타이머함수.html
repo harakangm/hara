@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <script>
+        /*
+        setTimeout()
+        */
+
+        //1000 = 1초
+        // setTimeout(()=>{
+        //     console.log('2초 후에 실행됩니다')
+        // }, 2000)
+
+
+        // 시간초마다 진행
+        let cnt = 0;
+
+        let id = setInterval(()=>{
+            console.log(`2초 마다 실행됩니다 ${cnt}`)
+            cnt++;
+        }, 2000)
+
+        // 타이머 종료
+        setTimeout(()=>{
+            console.log(`타이머 종료`)
+            clearInterval(id)
+        }, 5000)
+
+        
+    </script>
+</body>
+</html>

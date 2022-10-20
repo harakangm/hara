@@ -8,35 +8,35 @@
 </head>
 <body>
     <script>
-        function sum(kg, m) {
-            let sum = kg / (m * m) ;
-            return sum;
+        // let year = prompt('년도 입력')
+
+        // if ( (year % 400 === 0) || ( (year % 4 ===0) && (year % 100 !== 0) ) ) {
+        //     function leapyear (year) {
+        //         let result = year ;
+        //         return result;
+        //     }
+
+        //     let result2 = leapyear (year)
+
+        //     console.log(`${year}은 윤년`)
+        
+        // } else {
+        //     console.log('윤년아님')
+        // }
+
+        function isLeapYear(year) {
+            return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
         }
 
-        let bmi = sum(54, 1.73)
-        console.log(bmi)
-// //========================================================================
-//         const sum = function(kg, m) {
-//             let sum = kg / (m * m)
-//             return sum;
-//         }
+       let result = isLeapYear(2020)
 
-//         let bmi = sum(54, 17.3)
-//         console.log(bmi)
-// //====================================================================
-//         const sum = (kg, m) => {
-//             let sum = kg / (m * m);
-//             return sum;
-//         }
-
-//         let bmi = sum(54, 17.3)
-//         console.log(bmi)
-// //======================================================================
-        // const sum = (kg, m) => kg / (m * m);
-
-        // let bmi = sum(54, 17.3)
-        // console.log(bmi)
-
+       if (result) {
+         console.log('윤년입니다')
+       } else {
+        console.log('윤년이 아닙니다.')
+       }
     </script>
+
+
 </body>
 </html>

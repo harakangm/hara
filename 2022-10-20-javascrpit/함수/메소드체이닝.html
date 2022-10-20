@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 메소드 체이닝 : 필터가 실행한 값을 한번더 맵에서 실행시켜줌
+        // 순서대로 콜백함수를 계속 뒤에 붙일 수 있음
+
+        let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        // let result = numbers.filter(function(value){
+        //     // console.log(value)
+        //     return value % 2 ===0
+
+        // }).map(function(value){
+        //     return value * 2
+        // })
+        
+        
+
+        //화살표 함수로 만든것
+        let result = numbers.filter((value)=>{ return value % 2 === 0 })
+
+    </script>
+</body>
+</html>

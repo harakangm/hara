@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ㅁ콜백 함수:매개 변수로 함수를 전달한다.
+        // forEach(),map(),filter() 함수
+
+        
+                                // print 함수를 받음
+        function callThreeTimes(callback) {
+            for(let i = 0; i <3; i++){
+                callback(i)        //함수 자체를 실행
+            }
+        }
+        
+        // function print(i) {
+        //     console.log(`${i}번째 함수 호출`)
+        // }
+
+        callThreeTimes(function(i){
+            console.log(`${i}번째 함수 호출`)
+        })
+    </script>
+</body>
+</html>

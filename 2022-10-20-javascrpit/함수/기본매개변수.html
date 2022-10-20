@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //기본 매개변수
+        // 초기값을 주는 매개변수 =
+        //함수 값을 넣을수도있음
+        function earnings(name, wage=9000, hours=40){
+            console.log(`${name}님의 급여 정보`)
+            console.log(`시급: ${wage}`)
+            console.log(`근무시간 ${hours}`)
+            console.log(`급여: ${ wage * hours }원`)
+            console.log(`====`)
+        }
+        
+        // 기본값을 주어서 값이 제대로 나오게 해줌
+        earnings('구름')
+        earnings('별', 10000)
+        earnings('달', 10000, 52)
+
+    </script>
+</body>
+</html>

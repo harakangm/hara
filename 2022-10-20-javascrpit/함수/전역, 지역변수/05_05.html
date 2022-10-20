@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수</title>
+    <body>
+        <script>
+            var num = 1; //전역변수 함수 기준으로 밖에 있는 변수 함수 안으로 언제든지 가져다 쓸 수있음
+
+            //함수선언
+            function love(){
+              var b = 10;    // 지역변수
+              var a = num+1; // 지역변수 함수 기준으로 안에있는 변수
+              console.log('a:',a);
+            }
+            love();
+            console.log(num);
+
+            console.log(b); // 함수 안에있는 b라는 값을 못가져옴
+
+            //지역변수는 함수안에서 밖에 사용못하고 전역변수는 언제든지 쓸 수 있음
+        </script>
+</body>
+</html>
