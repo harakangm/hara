@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //.1 리터럴 방식 (6-1-1 html)
+        //객체 = 속성 + 메소드 (함수) (스펙+할수있는일)
+        //키와 벨류로 구성된다  함수도 키와 벨류
+
+        // 속성 추가 나이, 종
+        const pet = {
+            name: '팔팔이',  //속성
+            age: '11',
+            species: '말티즈',
+
+            eat: function(food) {    //함수 이기때문에 실행을 한다.
+                console.log(`팔팔이가 ${food}를 먹습니다.`)
+            },
+
+            sleep: function(where) {
+                console.log(`팔팔이가 ${where}에서 잠을 잡니다`)
+            }
+
+
+        }
+
+        console.log(pet.name)
+        
+        function load() {
+            console.log(`이름: ${pet.name}`)
+            console.log(`나이: ${pet.age}`)
+            console.log(`종: ${pet.species}`)
+        }
+
+        load()
+
+        //함수 실행 함수 이기때문에 매개변수를 줄 수있다.
+        pet.eat('간식')
+        pet.sleep('집')
+
+    </script>
+</body>
+</html>

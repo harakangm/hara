@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //프로토 다입 생성법
+        //객체 = 속성 + 메소드 (함수) 스펙 + 할 수 있는일
+        // key 값과 매개변수값을 원래 같게함
+        //중간에 prototype이라는 값으로 묶어줌 메모리가 절약됨
+        function Pet(nameVal, ageVal, typeVal) {
+            //속성
+            this.name = nameVal;
+            this.age = ageVal;
+            this.type = typeVal;
+        }
+
+        //prototype:메소드 작성법 객체 밖에다가 만든다
+        //객체명.prototype.함수명 = function () {}
+        Pet.prototype.eat = function (food) {
+            console.log(`${this.name}이가 ${food}를 먹습니다.`)
+        }
+
+        Pet.prototype.agePrint = function () {
+            console.log(`${this.name}의 나이는 ${this.age}입니다.`)
+        }
+
+        Pet.prototype.typePrint = function () {
+            console.log(`${this.name}의 종은 ${this.type}입니다.`)
+        }
+
+        const pet = new Pet('구름', '5', '숏') //객체생성 pet이라는 이름의 방을 생성
+        const pet2 = new Pet('별', '7', '길고양이')
+        const pet3 = new Pet('달', '12', '잡종')
+        const pet4 = new Pet('해', '9', '개')
+
+      
+
+        function load (num) {
+            pet(num).eat()
+            pet(num).agePrint()
+            pet(num).typePrint()
+        }
+
+        load(1)
+
+        
+        // pet.eat('밥')
+        // pet.agePrint()
+        // pet.typePrint()
+
+        // pet2.eat('밥')
+        // pet2.agePrint()
+        // pet2.typePrint()
+
+
+        // pet3.eat('밥')
+        // pet3.agePrint()
+        // pet3.typePrint()
+
+
+        // pet4.eat('밥')
+        // pet4.agePrint()
+        // pet4.typePrint()
+
+
+    </script>
+</body>
+</html>

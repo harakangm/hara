@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2. 객체 생성자 함수 방식
+        // 객체를 생성할때는 이름을 대문자로 시작한다
+        // 객체 = 속성 + 메소드(함수) (스펙+할 수 있는일)
+
+        //객체 정의
+        function Pet(nameVal, ageVal, typeVal) { // this : 현재 Pet이라는 객체 안에 있는 속성/메소드 이다
+            //속성
+            this.name = nameVal //Pet(name) = name (매개변수로 받아온애)
+            this.age = ageVal
+            this.type = typeVal
+            //메소드
+            this.eat = function (food) {
+                console.log(`${this.name} 이가 ${food}를 먹습니다.`)
+            }
+            this.agePrint = function () {
+                console.log(`${this.name}의 나이는 ${this.age}입니다.`)
+            }
+            this.typePrint = function () {
+                console.log(`${this.name}의 종은 ${this.type} 입니다`)
+            }
+        }
+
+        //하나의 객체들
+        //객체 생성
+        //실행 되자 말자 구름이라는 값이 nameVal에 값이 저장 된다
+        //각각 다른 방이 생성이 된다 (현재는 4개) function Pet(nameVal) 이 4개가 생성되는거
+        //객체를 생성한 순간 속성의 값이 할당이 된다
+        
+        const pet = new Pet("구름", 5, "코숏");
+        const pet2 = new Pet("달", 10, "개냥이");
+        const pet3 = new Pet("별", 7, "복실이");
+        const pet4 = new Pet("해", 9, "스라소니");
+
+        // function load () {
+        //     console.log(pet().eat)
+        //     console.log(pet().agePrint)
+        //     console.log(pet().typePrint)
+        // }
+        
+        // load(2)
+        
+
+
+        pet.eat('밥')
+        pet.agePrint()
+        pet.typePrint()
+
+        pet2.eat('밥')
+        pet2.agePrint()
+        pet2.typePrint()
+
+        pet3.eat('밥')
+        pet3.agePrint()
+        pet3.typePrint()
+
+        pet4.eat('밥')
+        pet4.agePrint()
+        pet4.typePrint()
+    </script>
+</body>
+</html>

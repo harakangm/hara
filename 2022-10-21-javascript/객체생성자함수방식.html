@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2. 객체 생성자 함수 방식
+        // 객체를 생성할때는 이름을 대문자로 시작한다
+        // 객체 = 속성 + 메소드(함수) (스펙+할 수 있는일)
+
+        //객체 정의
+        function Pet() { // this : 현재 Pet이라는 객체 안에 있는 속성/메소드 이다
+            //속성
+            this.name = '팔팔이'
+            //메소드
+            this.eat = function (food) {
+                console.log(`팔팔이가 ${food}를 먹습니다.`)
+            }
+        }
+
+        //객체 생성
+        //  (그냥변수명) (객체명)
+        //객체를 쓰는 이유 ? 코드의 생산성이 높아진다.
+        const pet = new Pet();
+        // // 변수에다 new (객체명)을 쓰면 객체 안에 있는 걸 가져다 쓸 수 있다.
+        // const pet2 = new Pet();
+
+
+
+        console.log(pet.name)
+        //매개변수 생성
+        pet.eat('밥')
+    </script>
+</body>
+</html>
