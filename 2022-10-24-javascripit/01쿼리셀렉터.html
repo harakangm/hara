@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+    <h1 class="txt">안녕하세요</h1>
+    <script>
+        /*
+        //태그 선택자, 클래스 선택자, 아이디 선택자.. 등 다 사용 가능
+        //document(전체 문서).querySelector('선택자') -> 해당 요소를 가져 온다.
+        const header = document.querySelector('.txt') 
+        console.log('header')
+        */
+
+        /*
+        // 요소.style.css속성(카멜) = 'css속성값' (속성값은 문자열로 써야한다)
+        header.style.color= 'red'
+        header.style.backgroundColor = 'black'
+        header.style.padding = '40px'
+        */
+
+
+        //해당 요소를 모두 가지고 온다 변수명은 복수형
+        //해당 요소를 배열로 가져다줌
+        const headers =document.querySelectorAll('.txt')
+        console.log(headers)
+
+        // //방법
+        // for (let i =0; i < headers.length; i++) {
+        //     headers[i].style.color='red'
+        //     headers[i].style.backgroundColor='black'
+        //     console.log(headers[1])
+        // }
+
+        // //방법2
+        // for (header of headers) {
+        //     headers[i].style.color='red'
+        //     headers[i].style.backgroundColor='black'
+        // }
+
+        //방법3
+        headers.forEach(function(header) {
+            headers[i].style.color='red'
+            headers[i].style.backgroundColor='black'
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="box">
+        첫번째 div
+        <span>테스트입니다.</span>
+    </div>
+    <script>
+        //createElement: 요소를 생성해줌
+        //const header = document.createElement('생성하고 싶은 태그명')
+        const header = document.createElement('textarea')  //<h1></h1> 
+        console.log(header)
+
+        //document.body.appendChild(header):부모 요소 아래에 자식 요소로 넣어준다
+        document.body.appendChild(header)
+
+
+        
+        const box = document.querySelector('.box')
+        const spantag = document.querySelector('span')
+
+        //박스 안에 자식요소인 태그를 추가해라
+        // box.appendChild(header) // div안에 h1태그가 들어 가있음
+
+        //remove 박스 밑에 있는 태그를 지워달라
+        box.removeChild(spantag)
+
+
+    </script>
+</body>
+</html>

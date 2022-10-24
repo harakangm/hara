@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"> cm =
+    <span></span>
+    <select>
+      <option value="10">mm</option>
+      <option value="0.01">m</option>
+      <option value="0.393701">inch</option>
+    </select>
+
+    <script>
+        let currentVal; //현재값
+        let transVal = 10; //변환상수
+
+        const select = document.querySelector('select')
+        const input = document.querySelector('input')
+        const span = document.querySelector('span')
+        
+
+        // 계산해주는 함수
+        function calculate() {
+            //계산 결과를 보여준다
+            span.textContent = (currentVal * transVal).toFixed(2)
+        }
+
+
+        //셀렉트 버튼이 바뀔떄
+        select.addEventListener('chage', function(e) {
+            const options = e.currentTarget.options
+            
+            const index = e.currentTarget.options.selectedIndex
+            
+            transVal = options[index].value //선택한 selcet 박스의 value
+            calculate()
+            p.textContent = ``
+        })
+
+
+        // 텍스트창에 입력했을때
+        input.addEventListener('keyup', function(e) {
+            //입력 받은 값을 가져오고
+            currentVal = e.currentTarget.value
+            console.log(currentVal)
+            //계산을 한다
+            calculate()
+        })
+    </script>
+</body>
+</html>

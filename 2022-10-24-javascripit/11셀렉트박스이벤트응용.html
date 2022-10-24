@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="U2TF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>오뎅</option>
+        <option>튀김</option>
+    </select>
+    <p>선택: 떡볶이</p>
+
+    <script>
+        const select = document.querySelector('select')
+        const p = document.querySelector('p')
+
+        select.addEventListener('change', function (e) { //'change' 변화가 일어날때 이벤트
+                // 옵션 값을 가져옴
+                const options = e.currentTarget.options // options 셀렉트 박스 안에 옵션들을 가지고옴
+                console.log(options)
+
+                const index = e.currentTarget.options.selectedIndex //내가 선택한 값의 인덱스를 가져옴
+                console.log(index)
+
+                //p태그가 내가 선택한 값으로 바꿀수 있게
+                // .textContent를 하면 내가 선택한 태그에서 글자만 뽑아 올수 있음
+                p.textContent = `선택: ${options[index].textContent}`
+        })
+    </script>
+</body>
+</html>

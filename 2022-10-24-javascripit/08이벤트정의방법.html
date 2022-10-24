@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alertfunc ()">click me</button>
+    <script>
+        const button = document.querySelector('button')
+
+
+        // //1. 표준 이벤트 모델
+        // button.addEventListener('click', function(){
+        //     alert('클릭! 표준!')
+        // })
+        
+
+        // //2. 고전 이벤트 모델
+        // document.body.onclick = function() { //바디안에 어느 곳을 눌러도 실행
+        //     alert('클릭 고전!')
+        // }
+
+        //3. 인라인 이벤트 모델
+        function alertfunc () { // 여기서 생성한 함수를 태그에 직접 집어 넣는다.
+            alert('클릭 인라인')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+
+        const input = document.querySelector('input')
+
+        input.addEventListener('keydown', function (e) {
+            console.log(e) // e: 발생한 이벤트에 대한 정보가 들어가 있다.
+            console.log(e.code) //code: 입력한 키를 나타냄
+            console.log(e.key)  //
+            console.log(e.keyCode)  // keyCode: 입력한 키를 나타내는 숫자
+            console.log(e.altKey)   // 알트나 컨트롤 쉬프트 키를 눌렀는지 아닌지를 불값으로줌
+            console.log(e.ctrlKey)
+            console.log(e.shiftKey)
+        })
+    </script>
+</body>
+</html>
