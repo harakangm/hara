@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pet {
+            // 인스턴스를 만들지 않고 바로실행
+            // 스태틱 속성 (정적 속성)
+            static color = 'black'
+            
+            constructor(nameVal, ageVal, catVal) { 
+                this.name = nameVal
+                this.age  = ageVal
+                this.cat  = catVal
+            }
+        
+            eat (food) { 
+                console.log(`${this.name}는 ${food}를 먹습니다`)
+            }
+
+            catAge () {
+                console.log(`${this.name}의 나이는 ${this.age} 입니다`)
+            }
+
+            catType () {
+                console.log(`${this.name}의 종류는 ${this.cat}종 입니다.`)
+            }
+
+
+            // 정적 메소드 static 메소드명 () {} 
+            static colorPrint () {
+                console.log(`이름은 ${this.color} 입니다.`)
+            }
+        }
+
+        //static 을 붙이면 인스턴스를 안 만들고 바로 속성과 매소드를 가져 올 수 있다
+        //정적 속성 실행
+        console.log(Pet.color)
+        //정적 함수 실행
+        //클래스에 가깝게 관리 가능 Pet이라는 클래스 명이 붙어 있으니까 알기 쉬움
+        console.log(Pet.namePrint())
+    </script>
+</body>
+</html>

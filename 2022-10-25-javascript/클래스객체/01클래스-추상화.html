@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //클래스 만드는법
+        //속성 + 메소드
+
+        // 정리 하는 방법이 틀리다 
+        class Pet {
+            //constructor : 생성자 함수
+            constructor(nameVal, ageVal, catVal) { // 속성
+                this.name = nameVal
+                this.age  = ageVal
+                this.cat  = catVal
+            }
+            //메소드
+            eat (food) { 
+                console.log(`${this.name}는 ${food}를 먹습니다`)
+            }
+
+            catAge () {
+                console.log(`${this.name}의 나이는 ${this.age} 입니다`)
+            }
+
+            catType () {
+                console.log(`${this.name}의 종류는 ${this.cat}종 입니다.`)
+            }
+        }
+
+
+        //클래스 생성
+        const pet = new Pet ('구름', 7, '코숏') //인스턴스 : 구현된 구체적 실체
+        console.log(pet.name)
+        console.log(pet.age)
+        console.log(pet.cat)
+        console.log(pet)
+        pet.eat('통조림')
+        pet.catAge()
+        pet.catType()
+
+        const pet2 = new Pet ('팔팔이', '10', '말티즈')
+
+        pet2.eat('고기')
+        pet2.catAge('고기')
+        pet2.catType('고기')
+
+        
+
+
+
+        
+    </script>
+</body>
+</html>

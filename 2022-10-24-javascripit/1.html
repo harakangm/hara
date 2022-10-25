@@ -6,29 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1 {
-            user-select: none;
-        }
+    .alert_msg {
+    display: none;
+    font-size: 0.8rem;
+    color: red;
+    padding-left: 110px;
+    }
     </style>
 </head>
 <body>
-    <h1>클릭횟수: 0</h1>
-    <button class="bt1">이벤트활성화</button>
-    <button class="bt2">이벤트비활성화</button>
-    <p>현재상태 : 비활성화</p>
+    <fieldset>
+        <legend>성별</legend>
+        <ul>
+            <li>
+                <select id="gender" name="gender">
+                    <option value="">성별</option>
+                    <option value="">남자</option>
+                    <option value="">여자</option>
+                </select>
+                <span class="alert_msg reg_gender">비워둘 수 없습니다.</span>
+            </li>
+        </ul>
+    </fieldset>
+
 
     <script>
-        // 버튼을 눌러서 이벤트를 활성화를 시킬지 말지 정하고
-        // 현재 상태에서의 활성화와 비활성화를 바꿈
-        const h1 = document.querySelector('h1')
-        const bt1 = document.querySelector('bt1')
-        const bt2 = document.querySelector('bt2')
-        const p = document.querySelector('p')
+    const gender = document.querySelector('#gender')
+    const regGender = document.querySelector('.reg_gender')
+        
+    gender.addEventListener('change', function(e) {
+        const index = e.currentTarget.options.selectedIndex
+        console.log(index)
+        regGender.style.display = 'none'
+        
+        if (index === 0) {
+            
+            regGender.style.display='block'
+        }
+   
+    })
 
-        h1.addEventListener('clikc', function() {
-
-        })
-
+    
     </script>
 </body>
 </html>

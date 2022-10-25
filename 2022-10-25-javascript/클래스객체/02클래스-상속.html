@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1 객체를 정의 속성 + 메소드
+        class Rectangle {
+            //  생성자 함수 속성을 정의 
+            constructor (width, hieght) {
+                console.log(width, hieght)
+                this.width = width
+                this.hieght = hieght
+            }
+
+            //메소드 정의
+            //사각형의 둘레 구하기
+            getPerimeter () {
+                return 2 * (this.width + this.hieght)
+            }
+            //사각형의 넓이 구하이
+            getArea () {
+                return this.width * this.hieght
+            }
+
+        }
+
+        // 자식클래스 extends 클래스명:부모클래스
+        // 클래스를 정의 하고 extends로 부모함수와 묶는다   
+        class Square extends Rectangle {
+
+            constructor (length, length2) {
+               super(length, length2) //super: 부모의 생성자 함수를 호출한다. Rectangle의 constructor
+                //   width , hieght
+            }
+
+
+        }
+
+
+
+        
+        // const rect = new Rectangle(10, 10)
+
+        // console.log(rect.getPerimeter())
+        // console.log(rect.getArea())
+
+
+        // 상속을 하면 자식클래스는 부모클래스에 있는 속성과 메소드를 쓸 수 있다.
+        const square = new Square(10, 20) // 무족건 생성자 함수 실행
+        console.log(square.width) // 부모클래스에 있는 속성도 가져와서 쓸 수 있다.
+        console.log(square.getPerimeter())
+        console.log(square.getArea())
+
+    </script>
+</body>
+</html>

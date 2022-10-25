@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 클래스 정의
+        class Num {
+            //속성을 정의
+            constructor (num, num2) {
+                this.num = num
+                this.num2 = num2
+            }
+            
+            //매서드 정의
+            pluse () {
+                let output = 0
+                output += this.num * this.num
+                return output
+            }
+
+            Pluse2 () {
+                return this.num2 * this.num2
+            }
+        } 
+        
+        class Num2 extends Num {
+            constructor (a, b) {
+                super(a, b)
+            }
+        }
+        
+        const num = new Num2 (Number(prompt('첫번째 정사각형의 변의 길이')), Number(prompt('두번째 정사각형의 변의길이')))
+
+        alert(num.pluse())
+        document.write(num.Pluse2())
+    </script>
+</body>
+</html>
