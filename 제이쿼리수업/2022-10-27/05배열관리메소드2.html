@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <ul class="wrap">
+            <li class="list_1">리스트1</li>
+            <li class="list_2">리스트2</li>
+            <li class="list_3">리스트3</li>
+        </ul>
+    </div>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+
+    <script>
+        //  var names = ['김부장', '정부장', '이부장']
+
+        //     // 배열을 찾아줌       요소    배열명
+        //  var idxNum = $.inArray('정부장', names)
+        //  console.log(idxNum)
+        // // 배열인지 아닌지 ture 와 false 로 값을 줌
+        //  console.log($.isArray(names))
+//================================================================================================
+
+        // 특정한 요소 중에서 인덱스번호를 찾아줌 
+         var idxnum = $('li').index($('.list_2')) // 선택자를 통으로 넣어줌
+         console.log(idxnum)
+
+
+    </script>
+</body>
+</html>

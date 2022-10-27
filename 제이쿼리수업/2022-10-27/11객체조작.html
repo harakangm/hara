@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <strong>객체 조작</strong>
+    </h1>
+
+    <p class="ct1">내용1</p>
+    <p class="ct1">내용2</p>
+    <p class="ct2">내용3</p>
+    <p class="ct2">내용4</p>
+    <ul>
+        <li>내용5</li>
+        <li>내용6</li>
+    </ul>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+        //unwrap 요소를 감싸고 있는 부모태그를 지워줌
+            $('strong').unwrap()
+
+        // wrap 요소를 감싸줌 두개의 요소가 있으면 따로따로 감싸줌
+        $('.ct1').wrap('<div />')
+
+        // wrapAll 요소가 여러개 있으면 한꺼번에 감싸줌
+        $('.ct2').wrapAll('<div />')  
+
+        // 내부에 있는 요소를 wrapInner에 있는 태그로 감싸줌
+        // 내부에 있는 요소를 wrapInner에 있는 태그로 감싸줌
+        $('li').wrapInner('<h3 />')
+
+        })
+    </script>
+</body>
+</html>

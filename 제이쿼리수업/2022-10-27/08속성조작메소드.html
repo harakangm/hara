@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aqua {background-color: aqua;}
+        .red {background-color: red;}
+        .green {background-color: green;}
+        .yellow {background-color: yellow;}
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="list_1">
+            <li id="list_1">
+            <span class="child">1번 자식입니다.</span>
+            <span>2번</span>
+            <span class="child3">3번</span>    
+            <span>4번</span>    
+            <span class="chuld5">5번</span>    
+            </li>
+            <li id="list_2">리스트2</li>
+            <li id="list_3">리스트3</li>
+        </ul>
+        <a href="http://www.naver.com" target="_blank">클릭</a>
+        <p class="green">안녕하세요</p>
+    </div>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        $(function(){
+            // 하위태그를 다 가져와줌
+            var result1 = $('.list_1').html();
+
+            console.log(result1)
+
+            //html안에 태그를 적어주면 list_1에 있는 모든 태그가 날라가고 새로운 태그가 삽입됨
+
+            var result1 = $('.list_1').text();
+            console.log(result1)
+            $()
+
+            //텍스트 형태로 삽입해줌
+
+
+            //attr (태그에 있는 속성의 속성값 을 가져옴)
+            console.log($('a').attr('target'))
+            //attr (속성의 속성값을 바꿔줄수도 있음) ('속성', '속성값')
+            $('a').attr('href', "https://www.google.com/")
+            //객체 데이터를 이용해서 여러개를 바꿀 수 있음
+            $('a').attr({
+                'href' :"https://www.google.com/",
+                'target' : '_panrent'
+            })
+
+            // removeAttr (속성) 속성을 삭제시켜줌
+            $('a').removeAttr('target')
+
+            // // addClass('css클래스') 클래스를 추가해줌
+            // $('p').addClass('aqua')
+
+            // //removeClass(클래스명) 클래스를 지워줌
+            // $('p').removeClass('red')
+
+            //toggleClass('클래스명') 클래스를 껏다 켯다 해줌 없으면 있게 있으면 없게
+            $('p').toggleClass('green')
+
+            //.hasClass ('클래스명') 클래스를 가지고 있냐? 가지고 있으면 ture 없으면 false
+            console.log( $('p').hasClass('green'))
+
+
+        })
+
+    </script>
+</body>
+</html>

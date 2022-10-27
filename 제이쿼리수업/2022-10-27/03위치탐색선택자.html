@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul class="wrap">
+            <li class="list_1">
+            <span class="child1">1번 자식입니다.</span>
+            <span>2번</span>
+            <span class="child3">3번</span>    
+            <span>4번</span>    
+            <span class="chuld5">5번</span>    
+            </li>
+            <li class="list_2">리스트2</li>
+            <li class="list_3">리스트3</li>
+        </ul>
+    </div>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(function(){
+            // // wrap의(자식) 리스트의 첫번쨰
+            // $('.wrap li:first').css('border', '1px solid red')
+
+            // // wrap의 (자식) li의 마지막
+            // $('.wrap li:last').css('border', '1px solid blue')
+            
+            // // li 태그 중에 홀수 번째선택 인덱스 번호 ex) 0,1,2.....
+            // $('.wrap li:odd').css('border', '1px solid red')
+
+            // // 짝수 번쨰 선택
+            // $('.wrap li:even').css('border', '1px solid blue')
+
+            // // eq(인덱스번호)  인덱스번호에 있는 요소를 찾아줌
+            // $('.list_1 span').eq(4).css('border', '1px solid red')
+
+            // //lt(인덱스번호) ~~ 보다 작은 gt(인덱스번호) ~~보다 큰 요소를 선택해줌
+            // $('.list_1 span:lt(2)').css('border', '1px solid red')
+            // $('.list_1 span:gt(2)').css('border', '1px solid blue')
+
+            // // 태그:first-of-type 요소중에서 맨 처음요소를 선택/~~ 마지막요소선택
+            // $('.list_1 span:first-of-type').css('border', '1px solid red')
+            // $('.list_1 span:last-of-type').css('border', '1px solid blue')
+
+            // // nth-child(요소번호): 요소번호 선택 인덱스 번호가 아님
+            // $('.list_1 span:nth-child(3)').css('border', '1px solid blue')
+
+            // 배열의 슬라이스랑 비슷함 인덱스 번호를 이용해서 잘라줌
+            $('.list_1 span').slice(1, 3).css('border', '1px solid blue')
+
+
+
+
+
+
+
+            
+
+        
+        })
+
+        
+    </script>
+
+</body>
+</html>

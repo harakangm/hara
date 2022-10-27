@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" target="_blank">이동</a>
+    <a href="https://www.naver.com" target="_blank">이동</a>
+
+    <form action="#" id="member_f">
+        <input type="text" name="user_id" id="user_id">
+        <input type="password" name="user_pwd" id="user_pwd">
+    </form>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            //속성 선택자 
+            $('a[target]').css('border','1px solid red').css('textDecoration', 'none')
+            // 지정한 속성 값의 요소를 선택
+            $('a[href^=https]').css('border','1px solid blue').css('textDecoration', 'none')
+            //
+
+            // 객체데이터{}로 쓰면 css안에 여러개 사용갘능
+            $('#member_f :text').css({backgroundColor: "blue"})
+        })
+    </script>
+</body>
+</html>

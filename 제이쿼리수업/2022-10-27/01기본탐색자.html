@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="title">제목</h1>
+    <h1 id="title2" class="title">안녕</h1>
+
+    <div>
+        <ul id="wrap">
+            <li id="list_1">
+            <span class="child">1번 자식입니다.</span> 
+            <span class="child2">2번 자식입니다.</span>    
+            <span>3번 자식입니다.</span>    
+            </li>
+            <li id="list_2">리스트2</li>
+            <li id="list_3">리스트3</li>
+        </ul>
+    </div>
+    <script src="./jquery-3.6.1.min.js">
+        //1.준비 jquery 홈페이지에 가서 파일을 다운 받은후 연결 제이쿼리를 맨위에 작성
+    </script>
+
+    <script>
+
+        
+        //제이쿼리 작성 $() 그후에 함수를 만들고 그 안에 내용을 적으면됨
+        $(function(){
+            $('#title') //아이디 선택자 === const 변수명 = document.querySelector('#title')
+
+            $('#title, #title2').css("color", "blue") // css속성 부여 css('속성', '속성값')
+
+            //인접선택자 체이닝가능
+            $('#list_1').parents().css('border', '1px solid red')
+            //자식 선택자
+            $('#list_1').children().css('border', '1px solid red')
+            //칠드런메서드안에 태그를 달면 하나만 끌고옴
+            $('#list_1').children('.child').css('border', '1px solid blue')
+
+            // 이전 선택자 후 선택자
+            $('.child2').prev().css('border', '1px solid red')
+            $('.child2').next().css('border', '1px solid blue')
+
+            //모든형제들을 선택
+            $('.child2').siblings().css('border', '1px solid red')
+
+
+            
+        })
+    </script>
+
+
+</body>
+</html>

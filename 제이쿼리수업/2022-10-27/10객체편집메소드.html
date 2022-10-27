@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="wrap">
+        <h1>제목</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+    <div id="wrap2">
+        <h1>제목</h1>
+    </div>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(function(){
+
+            // 선택한 부분을 replaceWith 로 다 바꿔줌
+                $('h1').replaceWith('<h3>헤더바꿈</h3>')
+            //위랑 결과는 같다
+                $('<h3>헤더바꿈</h3>').replaceAll('h1')
+//  // --------------------------------------------------------------------------------           
+//             //1.clone wrap에 자식태그들을 가져와서 복제함
+//             $('#wrap').children().clone()
+
+//             //2 변수를 생성후에 append()로 붙여넣기한다
+//             var copy = $('#wrap').children().clone()
+//             $('#wrap2').append(copy)
+
+// // -----------------------------------------------------------------------------------
+                // //remove() 다지워줌
+                // $('#wrap').remove()
+                // // empty() 하위 요소만 지워줌
+                // $('#wrap').empty()
+// // --------------------------------------------------------------------------------------------            
+//             //eq 인덱스 번호로 선택
+//             //after 내가 원하는 태그의 바로뒤에 내용을 붙임
+//             $('#wrap p:eq(2)').after("<p>after</p>")
+
+//             //.before 내가 원하는태그를 바로 앞에 붙임
+//             $('#wrap p:eq(1)').before("<p>Before</p>")
+
+
+//             // 위에 함수랑 반대로 쓰는데 결과는 똑같다
+//             $("<p>after</p>").insertAfter('#wrap p:eq(2)')
+//             $("<p>Before</p>").insertBefore('#wrap p:eq(1)')
+// //--------------------------------------------------------------------------------------------
+//             // append = 내가 선택한 요소에 하위태그에 맨 뒤에 내용 붙여줌
+//             $('#wrap').append('<p>내용4</p>')
+//             // prepend = 내가 선택한 요소의 하위태그 맨 앞에 붙여줌
+//             $('#wrap').prepend('<p>prepend</p>')
+//             // 위에랑 결과는 같다
+//             $('<p>내용4</p>').appendto('#wrap')
+//             $('<p>prepend</p>').prependto('#wrap')
+        })
+    </script>
+
+</body>
+</html>

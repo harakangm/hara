@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <span class="inner">테스트입니다.</span>
+        <span class="inner2">테스트입니다.</span>
+    </div>
+    <script>
+        const header = document.createElement('h1')
+        const inner = document.querySelector('.inner')
+
+
+        // parentNode는 부모태그를 선택해 준다
+        // inner의 부모태그를 선택하고 appendChild로 삽입해준다 
+        inner.parentNode.appendChild(header)
+
+        console.log(inner.nextSibling)
+
+        header.textContent = '하라'
+
+        // classList 클래스 추가
+        inner.classList.add('please')
+        inner.classList.remove('inner')
+
+        //nextSibling 자기 다음의 형제를 선택함
+        //nextsibling : 형제와 형제사이의 공백이 존재할 수 있음 매서드를 두번사용하면됨
+        inner.nextSibling.nextSibling.innerHTML = '바뀜'
+    </script>
+</body>
+</html>

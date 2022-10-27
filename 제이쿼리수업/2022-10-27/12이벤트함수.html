@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>
+        <button class="btn1">버튼1</button>
+    </P>
+    <p>내용1</p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p>
+
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            //기본 이벤트 작성
+            $('.btn1').click(function(){
+                $('.btn1').parent().next().css({'color' :'red'})
+            })
+
+            //on이벤트 종류를 여러게 사용할때 사용
+            $('.btn2').on({
+                "mouseover focus" : function(){
+                    $('.btn2').parent().next().css({'color' :'red'})
+                },
+                "mouseout blur" : function(){
+                    $('.btn2').parent().next().css({'color' :'black'})
+                }
+            })
+
+            //이벤트 제거 .off('매개변수 제거하고 싶은 이벤트명')
+
+            $('.btn1').off('click')
+            $('.btn2').off('mouseover focus')
+
+            
+        })
+    </script>
+</body>
+</html>
